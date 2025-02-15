@@ -1,10 +1,13 @@
 # Calculator
 This is a Python implementation for a program that acts like a calculator and can perform numerous mathematical operations including:
+- clear C
+- percentage %
 - parentheses [] ()
 - exponentiation ** and ^
-- multiplication *
-- floating-point division /
+- multiplication * ×
+- floating-point division / ÷
 - floor division //
+- modulus %
 - addition +
 - subtraction -
 
