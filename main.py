@@ -16,11 +16,13 @@ The following operations are supported:
 \t-\t subtraction
 """
     print(greeting)
+    error_message: str = 'Please enter a valid mathematica expression...'
+    exit_message: str = 'Exiting program...'
     while True:
         try:
-            user_input = input('Enter a mathematical expression: ')
+            user_input: str = input('Enter a mathematical expression: ')
             if user_input == 'exit':
-                print('Thanks for trying my program!')
+                print(exit_message)
                 exit()
 
             user_input = user_input.replace('^', '**')
@@ -40,14 +42,12 @@ The following operations are supported:
                 output = eval(user_input)
             print(output)
 
-        except NameError:
-            print('Mathematical expression contains letters...')
+        except (NameError, SyntaxError):
+            print(error_message)
             continue
-        except SyntaxError:
-            print('Mathematical expression contains invalid symbols...')
-            continue
+
         except KeyboardInterrupt:
-            print('Exiting...')
+            print(exit_message)
             exit()
 
 
